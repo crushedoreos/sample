@@ -1,24 +1,7 @@
-//Type button
 const btn = document.querySelector("#start-typing-btn");
 
 //Type area
 const typeArea = document.querySelector("#text-type");
-
-// btn.addEventListener("click", () => {
-//   // Text value
-//   const str = document.querySelector("#text").value;
-//   // Speed value
-//   let speed = document.querySelector("#type-speed").value;
-
-//   // Set the default speed to 250
-//   speed = speed ? Number(speed) : 250;
-
-//   // Empty the type area before starting to type again
-//   typeArea.innerHTML = "";
-
-//   // Start typing;
-//   type(str, speed);
-// });
 
 const type = (str, speed) => {
     if (str === "") {
@@ -39,32 +22,10 @@ const type = (str, speed) => {
     }
   };
 
-
-// function recurse() {
-//     if(true) {
-//         // Text value
-//   const str = document.querySelector("#text").value;
-//   // Speed value
-//   let speed = document.querySelector("#type-speed").value;
-
-//   // Set the default speed to 250
-//   speed = speed ? Number(speed) : 250;
-
-//   // Empty the type area before starting to type again
-// //   typeArea.innerHTML = "";
-//         type(str, speed);
-//     }
-
-//     setTimeout(recurse, 5);
-// }
-
-// recurse();
-
-function yourFunction(){
-    // do whatever you like here
+function recurse(){
     const str = document.querySelector("#text").value;
     typeArea.innerHTML = str;
-    setTimeout(yourFunction, 5);
+    setTimeout(recurse, 5);
 }
 
-yourFunction();
+recurse();
